@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vulnerable
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vulnerable 
+  template:
+    metadata:
+      labels:
+        app: vulnerable
+    spec:
+      containers:
+      - name: vulnerable
+        image: index.docker.io/jrrdev/cve-2017-5638:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vulnerable
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    app: vulnerable
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 30001
