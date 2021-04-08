@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: vulnerable
-        image: index.docker.io/jrrdev/cve-2017-5638:latest
+        image: index.docker.io/fortidemo/cve-2017-5638:latest
 ---
 apiVersion: v1
 kind: Service
