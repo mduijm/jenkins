@@ -1,3 +1,3 @@
-# fortidemo
+# Jenkins
 
-Place to store YAML files for training purposes
+Place to store YAML files to build custom Jenkins image for FortiPoc
