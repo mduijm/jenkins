@@ -19,4 +19,5 @@ ssh-slaves:latest
 timestamper:latest
 workflow-aggregator:latest
 ws-cleanup:latest
-forticwp-cicd:latest
+# remove the # if you want to load the plugin on Docker creation
+# forticwp-cicd:latest
